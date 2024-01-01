@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+  /* COLORS */
+  --clr-primary-paleBlue:hsl(225, 100%, 94%);
+  --clr-primary-brightBlue:hsl(245, 75%, 52%);
+
+
+  --clr-neutral-veryBluePale:hsl(225, 100%, 98%);
+  --clr--neutral-desaturatedBlue:hsl(224, 23%, 55%);
+  --clr-neutral-darkBlue: hsl(223, 47%, 23%);
+  --clr-white: #fff;
+
+  /* FONTS */
+  --fm--redHot:'Red Hat Display', sans-serif;
+  --fs-par:16px;
+
+}
+
+body {
+  height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  max-width: 25rem;
+  background-color: var(--clr-white);
+  border-radius: 1.2rem;
+  box-shadow: 0 20px 80px 5px var(--clr--neutral-desaturatedBlue);
+}
+
+main .order-img {
+  background-image: url(images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.2rem 1.2rem 0 0;
+  height: 200px;
+}
+
+.order-info {
+  font-family: var(--fm--redHot);
+  display: grid;
+  align-items: center;
+  margin: 2rem;
+}
+
+.order-description {
+  text-align: center;
+}
+
+.order-description h1 {
+  color: var(--clr-neutral-darkBlue);
+  margin-bottom: 0.8rem;
+}
+.order-description p {
+  color: var(--clr--neutral-desaturatedBlue);
+  margin-top: 0;
+}
+
+.order-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-neutral-veryBluePale);
+  border-radius: 1rem;
+  margin: 1rem 0 1.6rem 0;
+}
+.order-annual-plan {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: var(--fs-par);
+  
+} 
+.order-annual-plan svg {
+  margin-right: 0.8rem;
+  transform: scale(0.9);
+}
+
+.order-price h4{
+  margin-bottom: 0;
+  font-weight: 800;
+}
+.order-price p{
+  color: var(--clr--neutral-desaturatedBlue);
+  margin-top: 0.2rem;
+}
+.order-plan a {
+  color: var(--clr-primary-brightBlue);
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.btn-payment {
+  padding: 0.8rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--clr-primary-brightBlue);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  box-shadow: 0 5px 20px 4px rgb(185, 173, 255);
+  transition: all 0.5s;
+  margin-bottom: 1.5rem;
+}
+.btn-payment:hover {
+  background-color: var(--clr-neutral-darkBlue);
+}
+
+.order-cancel {
+  text-align: center;
+  color: var(--clr--neutral-desaturatedBlue);
+  border: none;
+  background-color: var(--clr-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width:600px) {
+  main {
+    max-width: 20rem;
+    transform: scale(0.9);
+  }
+  .order-plan {
+    font-size: 13px;
+  }
+  .order-annual-plan {
+    font-size: 13px;
+    margin-left: 0.5rem;
+  }
+  .order-plan a {
+    margin-right: 0.8rem;
+  }
+  
+}

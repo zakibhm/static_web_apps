@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  --fm-inter:'Inter', sans-serif;
+  --fm-lexendDeca :'Lexend Deca', sans-serif;
+
+
+  --clr-primary-mainBG: hsl(233, 47%, 7%);
+  --clr-primary-cardBG: hsl(244, 38%, 16%);
+  --clr-primary-accent: hsl(277, 64%, 61%);
+
+  --clr-neutral-white:hsl(0, 0%, 100%);
+  --clr-neutral-mainPar: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-statHeading: hsla(0, 0%, 100%, 0.6);
+  --fs-body : 15px;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-primary-mainBG);
+}
+.img-main {
+  background-image: url(images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--clr-primary-accent);
+  width: auto;
+  height: auto;
+  border-radius: 0 1rem 1rem 0;
+}
+main { 
+  display: grid;
+  max-width: 70rem;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--clr-primary-cardBG);
+  border-radius: 1rem;
+  box-shadow: 0 5px 30px 8px rgb(23, 12, 28);
+}
+
+.stats-info {
+  display: grid;
+  margin: 2rem;
+  margin-left: 4rem;
+  font-family: var(--fm-inter);
+}
+.stats-info > * {
+  width: 80%;
+}
+.stats-info h1 {
+  color: var(--clr-neutral-white);
+  font-family: var(--fm-inter);
+}
+h1 span {
+  color: var(--clr-primary-accent);
+}
+
+.stats-info > p {
+  color: var(--clr-neutral-mainPar);
+  width: 90%;
+  margin-top: 0.5rem;
+}
+
+.stats-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 0.2rem;
+  color: var(--clr-neutral-white);
+}
+.flex-group h2 {
+  margin-bottom: 0.3rem;
+}
+.flex-group p {
+  font-family: var(--fm-lexendDeca);
+  color: var(--clr-neutral-mainPar);
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+@media (max-width:800px) {
+  
+  main {
+    display: grid;
+    grid-template-areas: 
+    'img'
+    'info';
+    grid-template-columns: 1fr ; 
+    max-width: 28rem;
+  }
+  .img-main {
+    grid-area: img;
+    background-image: url(images/image-header-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 1rem 1rem 0 0;
+  }
+  
+  .stats-info {
+    grid-area: info;
+    text-align: center;
+    margin: 3rem;
+  }
+  .stats-info > * {
+    width: 100%;
+  }
+  .stats-info > p {
+    width: 100%;
+  }
+
+  .stats-details {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-group {
+    text-align: center;
+  }
+}
+

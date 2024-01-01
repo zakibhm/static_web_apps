@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --clr-primary-softBlue:hsl(215, 51%, 70%);
+  --clr-primary-cyan:hsl(178, 100%, 50%);
+  --clr-neutral-mainBG: hsl(217, 54%, 11%);
+  --clr-neutral-mainShadow:hsl(215, 69%, 6%);
+  --clr-neutral-cardBG: hsl(216, 50%, 16%);
+  --clr-neutral-line: hsl(215, 32%, 27%);
+  --clr-white:hsl(0, 0%, 100%);
+  --fs--paragraph:18px;
+  --fm-outfit:'Outfit', sans-serif;
+
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  background-color: var(--clr-neutral-mainBG);
+  place-items: center;
+}
+
+.nft-component {
+  background-color: var(--clr-neutral-cardBG);
+  border-radius: 1rem;
+  display: grid;
+  max-width: 23rem;
+  box-shadow: 0 10px 20px 20px var(--clr-neutral-mainShadow);
+}
+
+.nft-img {
+  background-image: url(images/image-equilibrium.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  margin: 1.2rem;
+  border-radius: 1rem;
+}
+
+.nft-info {
+  display: grid;
+  margin: 1.2rem;
+  margin-top: 0;
+  font-family: var(--fm-outfit);
+}
+
+.nft-info h1 {
+  color: var(--clr-white);
+  margin-top: 0.8rem;
+}
+.nft-info .nft-description {
+  color: var(--clr-primary-softBlue);
+  font-size: var(--fs--paragraph);
+  width: 90%;
+}
+
+.nft-stat {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 0.2rem;
+}
+
+.nft-stat .nft-flexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nft-value p{
+  color: var(--clr-primary-cyan);
+  margin-left: 0.5rem;
+}
+
+.nft-time p{
+  color:var(--clr-primary-softBlue);
+  margin-left: 0.5rem;
+}
+
+hr {
+  background-color: var(--clr-neutral-line);
+  height: auto;
+  width: 100%;
+  opacity: 20%;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+
+
+.nft-creator {
+  display: flex;
+  place-items: center;
+}
+.nft-creator img {
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.nft-creator p {
+  color: var(--clr-primary-softBlue);
+}
+.nft-creator span{
+  color: var(--clr-white);
+  font-weight: 500;
+}
+
+
+@media (max-width:600px)
+{
+  .nft-component {
+    transform: scale(0.8);
+  }
+}
+
+
+
+
+
